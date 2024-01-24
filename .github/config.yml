@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: TheModdersDen's Instagram
+    url: https://www.instagram.com/themoddersden/
+    about: Please contact me here for any questions or concerns. I will try to respond as soon as possible.
+  - name: GitHub Security Issues/Bug Reports
+    url: https://themoddersden.com/contact/
+    about: Please report security vulnerabilities and bugs here (using one of the forms of contact available on my website).
