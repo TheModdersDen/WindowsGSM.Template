@@ -23,7 +23,9 @@
 
 ## By TheModdersDen
 
-### This plugin is for use with [WindowsGSM](https://windowsgsm.com/), a powerful tool to create, manage and monitor game servers on Windows
+### This plugin is for use with [WindowsGSM](https://windowsgsm.com/), a powerful tool to create, manage and monitor game servers on Windows. It is currently in development and is not yet ready for use.
+
+**USE AT YOUR OWN RISK!!!**
 
 ## Requirements
 
@@ -31,7 +33,6 @@
 - [A Steam Account](https://store.steampowered.com/join/)
 - [Palworld](https://store.steampowered.com/app/1623730/Palworld/)
 - [Access to the Palworld Dedicated Server in your Steam Library (Under the `Tools` Category)](https://steamdb.info/app/2394010/)
-- [A Palworld Dedicated Server Token](https://steamcommunity.com/dev/managegameservers)
 
 ## Installation
 
