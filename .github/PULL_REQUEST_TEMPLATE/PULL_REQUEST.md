@@ -29,18 +29,14 @@ Please delete options that are not relevant.
 
 Please check the following items before submitting your fix pull request:
 
-- [ ] You have followed the [code style guidelines](https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/creating-a-pull-request-template-for-your-repository) of the project.
-- [ ] You have commented your code, particularly in hard-to-understand areas.
-- [ ] You have added tests that prove your fix is effective or that your feature works (and have documented if so), if applicable.
-- [ ] You have read the [contributing guidelines](https://github.com/TheModdersDen/repo_base/.github/blob/production/CONTRIBUTING.md) of the project.
-- [ ] You have resolved any merge conflicts with the base branch, if any.
-- [ ] You have tidied up your code and kept it in line with the rest of the project, and with the below:
-  - [ ] You have removed any unnecessary comments, code, and whitespace.
-  - [ ] You have used the appropriate casing, naming, and formatting conventions.
-  - [ ] You have used the appropriate language, grammar, and spelling.
-  - [ ] You have used the appropriate documentation, such as comments, doc-strings, and READMEs.
-- [ ] You have requested a review from one or more maintainers of the project, if applicable and have done all the things a good maintainer would do, including:
-  - [ ] You have assigned the pull request to yourself (unless otherwise specified).
-  - [ ] You have added the appropriate labels, milestone, projects, reviewers, and assignees to the pull request.
-  - [ ] You have added the appropriate linked issues, PRs, discussions, commits, and checks to the pull request.
-- [ ] Finally, you have tested your fix and verified that it works as intended and thus contributing to the overall goal of the project, which you kept in mind.
+- [ ] I have read the various files that are included in this repository that are relevant to contributing to this project, including (but not limited to):
+  - The [README](../../README.md) file.
+  - The [LICENSE](../../docs/LICENSE.md) file.
+  - The [CONTRIBUTING](../../docs/CONTRIBUTING.md) file.
+  - The [CODE OF CONDUCT](../../docs/CODE_OF_CONDUCT.md) file.
+  - The [SECURITY](../../docs/SECURITY.md) file.
+  - And last, but not leas, the [CHANGELOG](../../docs/CHANGELOG.md) file.
+- [ ] I have done my best to ensure that my changes are well-documented and that my code is clean and readable.
+- [ ] I have tested my changes locally and they are working as expected, do not introduce any new bugs, vulnerabilities, or issues, and do not break any existing functionality and have documented my code and testing process.
+- [ ] I have made any necessary changes to the documentation and have updated the README with details of the changes (if applicable).
+- [ ] Finally, I have coordinated with the project maintainers to ensure that my changes are in line with the project's goals and objectives and that my changes are in line with the project's goals and objectives.

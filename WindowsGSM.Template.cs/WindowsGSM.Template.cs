@@ -10,16 +10,16 @@ using WindowsGSM.GameServer.Query;
 
 namespace WindowsGSM.Plugins
 {
-    public class WindowsGSMPalworldPlugin : SteamCMDAgent
+    public class WindowsGSMTemplatePlugin : SteamCMDAgent
     {
         // - Plugin Details
         public Plugin Plugin = new Plugin
         {
-            name = "WindowsGSM.Palworld", // WindowsGSM.XXXX
+            name = "WindowsGSM.Template", // WindowsGSM.XXXX
             author = "TheModdersDen", // author of plugin
-            description = "A WindowsGSM plugin for supporting Palworld Dedicated Server", // description for plugin
+            description = "A WindowsGSM plugin for supporting a Dedicated Server", // description for plugin
             version = "0.0.1", // version of plugin
-            url = "https://github.com/TheModdersDen/WindowsGSM.Palworld", // Github repository link (Best practice)
+            url = "https://github.com/TheModdersDen/WindowsGSM.Template", // Github repository link (Best practice)
             color = "#ffffff" // Color Hex of the plugin panel
         };
 
@@ -32,32 +32,21 @@ namespace WindowsGSM.Plugins
         // The server description (feel free to change this to your liking)
         public string ServerDescription = "A Server Created by WindowsGSM";
 
-        // The admin password (used for RCON. PLEASE CHANGE IT TO SOMETHING ELSE IN YOUR SERVER CONFIG!)
-        //
-        // DO NOT CHANGE IT HERE UNLESS ABSOLUTELY NECESSARY! 
-        // If you need to do this, please change it in the server config file as that is more secure.
-        // This is just a template password to help you get started (and prevent unauthorized access to your server).
-        //
-        // If you have issues changing the admin password, or can't connect to RCON, please see the following link:
-        //
-        // https://github.com/TheModdersDen/WindowsGSM.Palworld/issues/new/ (and fill out the issue template)        
-        public string AdminPassword = "CHANGEME54321";
-
         // =================== END USER CONFIGURABLE VALUES ================= //
 
         // - Standard Constructor and properties
-        public WindowsGSMPalworldPlugin(ServerConfig serverData) : base(serverData) => base.serverData = _serverData = serverData;
+        public WindowsGSMTemplatePlugin(ServerConfig serverData) : base(serverData) => base.serverData = _serverData = serverData;
         private readonly ServerConfig _serverData;
 
 
         // - Settings properties for SteamCMD installer
-        public override bool loginAnonymous => false; // Palworld requires to login steam account to install the server, so loginAnonymous = false
-        public override string AppId => "2394010"; // Game server appId, Palworld Dedicated Server is 2394010
+        public override bool loginAnonymous => true;
+        public override string AppId => "0000"; // Game server appId
 
 
         // - Game server Fixed variables
-        public override string StartPath => @"PalServer"; // Game server start path
-        public string FullName = "Palworld Dedicated Server"; // Game server FullName
+        public override string StartPath => @"TemplateServer"; // Game server start path
+        public string FullName = "Template Dedicated Server"; // Game server FullName
         public bool AllowsEmbedConsole = false;  // Does this server support output redirect?
         public int PortIncrements = 2; // This tells WindowsGSM how many ports should skip after installation
         public object QueryMethod = A2S(); // Query method, in this case, it is using A2S
@@ -99,15 +88,13 @@ namespace WindowsGSM.Plugins
             return !string.IsNullOrWhiteSpace(text);
         }
 
-        // Get the user's public IP for Palworld's config:
+        // Get the user's public IP for the server's config:
         private static async Task<string> GetPublicIpAddressAsync()
         {
             using (var client = new HttpClient())
             {
-                var response = await client.GetStringAsync("http://checkip.dyndns.org/");
-                var startIndex = response.IndexOf("Current IP Address: ", StringComparison.OrdinalIgnoreCase) + 17;
-                var endIndex = response.IndexOf("</body>", StringComparison.OrdinalIgnoreCase);
-                return response.Substring(startIndex, endIndex - startIndex).Trim();
+                var response = await client.GetStringAsync("http://api.ipify.org/");
+                return response.Replace("\n", "");
             }
         }
 
@@ -116,7 +103,7 @@ namespace WindowsGSM.Plugins
         // - Create a default cfg for the game server after installation
         public async void CreateServerCFG()
         {
-            PublicIPAddress = await WindowsGSMPalworldPlugin.GetPublicIpAddressAsync();
+            PublicIPAddress = await WindowsGSMTemplatePlugin.GetPublicIpAddressAsync();
             Console.WriteLine($"Current public ip address: '{PublicIPAddress}'.");
             Console.WriteLine($"To connect to the server, use the following command: 'open {PublicIPAddress}:{Port}'.\nOr simply enter '{PublicIPAddress}:{Port}' in the server browser.");
 

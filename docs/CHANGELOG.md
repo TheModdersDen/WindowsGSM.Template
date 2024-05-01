@@ -1,6 +1,6 @@
 # CHANGELOG
 
-## [Unreleased]
+## [0.0.1]
 
 ### Added
 
@@ -10,11 +10,11 @@
 - CHANGELOG.md (under `docs/`)
 - README.md (under the root directory)
 - .gitignore (under the root directory)
-- The `WindowsGSM.Palworld.cs` directory and base plugin files
+- The `WindowsGSM.Template.cs` directory and base plugin files
 - The `.vscode` directory (for Visual Studio Code and cSpell support/configuration)
 - The `docs` directory (for documentation)
 - The `.github` directory (for GitHub-specific files)
-  - GitHub actions
+  - GitHub actions (a `spell-check` action, to be specific)
   - GitHub issue templates
   - GitHub pull request template
   - A pull request template

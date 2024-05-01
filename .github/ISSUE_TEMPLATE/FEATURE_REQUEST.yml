@@ -2,62 +2,106 @@ name: "💡 Feature Request"
 description: Create a new ticket for a new feature request
 title: "💡 [REQUEST] - <title>"
 labels: [
-  "question"
+  "feature-request"
+]
+assignees: [
+  "TheModdersDen"
 ]
 body:
-  - type: input
-    id: start_date
+  - type: textarea
+    id: start-date
     attributes:
       label: "Start Date"
-      description: Start of development
-      placeholder: "month/day/year"
+      description: |
+        When did you start working on this feature request or
+        when did you first think about it? If you don't remember
+        the exact date, either choose a date close to when you
+        first thought about it or leave this field blank.
+      placeholder: "Start date (in the format of 'MM/DD/YYYY')."
+      render: markdown
     validations:
       required: false
   - type: textarea
-    id: implementation_pr
+    id: implementation-pr
     attributes:
       label: "Implementation PR"
-      description: Pull request used
-      placeholder: "#Pull Request ID"
+      description: |
+        Does this feature request have an implementation PR
+        attached to it? If so, please provide the PR ID 
+        (number) so that it can be linked to this issue.
+      placeholder: "Pull Request ID, if applicable."
+      render: markdown
     validations:
       required: false
   - type: textarea
-    id: reference_issues
+    id: reference-issues
     attributes:
       label: "Reference Issues"
-      description: Common issues
-      placeholder: "#Issues IDs"
+      description: |
+        Are there any relevant issues that are related to this
+        feature request? If so, please provide the issue ID(s)
+        so that they can be linked to this issue.
+      placeholder: "Issue IDs (comma-separated)"
+      render: markdown
     validations:
       required: false
   - type: textarea
     id: summary
     attributes:
       label: "Summary"
-      description: Provide a brief explanation of the feature
-      placeholder: Describe in a few lines your feature request
+      description: |
+        Provide a brief explanation of the feature which you
+        are requesting. This should be a high-level overview
+        of the feature and should be concise so that it can
+        be easily understood and replicated into a PR/issue.
+      placeholder: |
+        Describe in a few lines/paragraphs your feature 
+        request. Please don't write a novel here. :wink:
+      render: markdown
     validations:
       required: true
   - type: textarea
     id: basic_example
     attributes:
-      label: "Basic Example"
-      description: Indicate here some basic examples of your feature.
-      placeholder: A few specific words about your feature request.
+      label: "Basic Implementation/Example"
+      description: |
+        Please indicate some basic examples or ideas of your feature
+        and how it would be implemented. This can be a simple code
+        snippet, a diagram, or a detailed explanation of how the
+        feature would work. This is not required, but it is highly
+        recommended!
+      placeholder: |
+        A few examples or ideas of how your feature would be 
+        implemented.
+      render: markdown
     validations:
-      required: true
+      required: false
   - type: textarea
     id: drawbacks
     attributes:
-      label: "Drawbacks"
-      description: What are the drawbacks/impacts of your feature request ?
-      placeholder: Identify the drawbacks and impacts while being neutral on your feature request
+      label: "Drawbacks/Potential Issues"
+      description: |
+        What are some of the potential issues with adding your feature?
+        Are there any drawbacks or impacts that you can think of? Please
+        be as neutral as possible when discussing these drawbacks, as 
+        this will help to provide a more balanced view of the feature
+        and will make it more likely to be accepted (as well as help
+        speed the development process along).
+      placeholder: Provide any potential issues that this feature might add.
+      render: markdown
     validations:
       required: true
-  - type: textarea
-    id: unresolved_question
+  - type: checkboxes
+    id: privacy
     attributes:
-      label: "Unresolved questions"
-      description: What questions still remain unresolved ?
-      placeholder: Identify any unresolved issues.
-    validations:
-      required: false
+      label: "Privacy Acknowledgement"
+      description: "Please confirm that you have read and agree to the terms and conditions."
+      options:
+        - label: "I understand that my question may be publicly visible."
+          required: true
+        - label: "I have read and agree to the terms and conditions (found in the 'TERMS_AND_CONDITIONS.md' file in the 'docs' directory)."
+          required: true
+        - label: "I understand that my question may be closed without notice, potentially without an answer."
+          required: true
+        - label: "I understand that my question may be removed, deleted, or otherwise altered without notice."
+          required: true

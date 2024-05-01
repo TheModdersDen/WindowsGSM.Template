@@ -1,0 +1,65 @@
+name: "❔ Question"
+description: Ask a question to the author or develope(s) of this project.
+title: "❔ [QUESTION] - <title>"
+labels: [
+  "question"
+]
+assignees: [
+  "TheModdersDen"
+]
+body:
+  - type: textarea
+    id: question
+    attributes:
+      label: "Question"
+      description: Please enter the main part of your question here
+      placeholder: Your main question (be specific)...
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: "Description"
+      description: Please enter a specific description of your question
+      placeholder: Short and specific description of your question...
+    validations:
+      required: true
+  - type: dropdown
+    id: question-type
+    attributes:
+      label: "Question Type"
+      description: What type of question are you asking?
+      options:
+        - "General"
+        - "Technical"
+        - "Licensing"
+        - "Other"
+    validations:
+      required: true
+  - type: textarea
+    id: additional-info
+    attributes:
+      label: "Additional Information"
+      description: |
+        Please provide any additional information that may be relevant to your question.
+        This could include any additional images, links, or other information that may 
+        be relevant. Please be as specific as possible and try to provide as much
+        information as you can. The more information you provide, the better I can
+        help you. This is not required, but it is highly recommended!
+      placeholder: Any additional information that may be relevant to your question...
+    validations:
+      required: false
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: "Privacy Acknowledgement"
+      description: "Please confirm that you have read and agree to the terms and conditions."
+      options:
+        - label: "I understand that my question may be publicly visible."
+          required: true
+        - label: "I have read and agree to the terms and conditions (found in the 'TERMS_AND_CONDITIONS.md' file in the 'docs' directory)."
+          required: true
+        - label: "I understand that my question may be closed without notice, potentially without an answer."
+          required: true
+        - label: "I understand that my question may be removed, deleted, or otherwise altered without notice."
+          required: true

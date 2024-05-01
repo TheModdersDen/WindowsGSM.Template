@@ -1,0 +1,190 @@
+{
+  "better-comments.tags": [
+    {
+      "tag": "!",
+      "color": "#FF2D00",
+      "strikethrough": false,
+      "underline": false,
+      "backgroundColor": "transparent",
+      "bold": true,
+      "italic": true
+    },
+    {
+      "tag": "?",
+      "color": "#3498DB",
+      "strikethrough": false,
+      "underline": false,
+      "backgroundColor": "transparent",
+      "bold": false,
+      "italic": true
+    },
+    {
+      "tag": "//",
+      "color": "#474747",
+      "strikethrough": true,
+      "underline": false,
+      "backgroundColor": "transparent",
+      "bold": false,
+      "italic": false
+    },
+    {
+      "tag": "todo",
+      "color": "#FFEC2A",
+      "strikethrough": false,
+      "underline": true,
+      "backgroundColor": "transparent",
+      "bold": false,
+      "italic": false
+    },
+    {
+      "tag": "*",
+      "color": "#98C379",
+      "strikethrough": false,
+      "underline": false,
+      "backgroundColor": "transparent",
+      "bold": false,
+      "italic": false
+    },
+    {
+      "tag": "note:",
+      "color": "#FFA84D",
+      "strikethrough": false,
+      "underline": true,
+      "backgroundColor": "transparent",
+      "bold": true,
+      "italic": true
+    }
+  ],
+  "better-comments.multilineComments": true,
+  "better-comments.highlightPlainText": true,
+  "copyrightInserter.holder": "TheModdersDen",
+  "[javascript]": {
+    "editor.formatOnSave": true,
+    "editor.codeLens": true
+  },
+  "[typescript]": {
+    "editor.formatOnSave": true,
+    "editor.codeLens": true
+  },
+  "[json]": {
+    "editor.insertSpaces": true,
+    "editor.autoIndent": "keep",
+    "diffEditor.ignoreTrimWhitespace": false,
+    "editor.quickSuggestions": {
+      "strings": true
+    },
+    "editor.suggest.insertMode": "replace",
+    "editor.formatOnSave": true,
+    "editor.codeLens": true
+  },
+  "[json5]": {
+    "editor.insertSpaces": true,
+    "editor.autoIndent": "keep",
+    "diffEditor.ignoreTrimWhitespace": false,
+    "editor.quickSuggestions": {
+      "strings": true
+    },
+    "editor.suggest.insertMode": "replace",
+    "editor.formatOnSave": true,
+    "editor.codeLens": true
+  },
+  "[python]": {
+    "diffEditor.ignoreTrimWhitespace": false,
+    "gitlens.codeLens.symbolScopes": ["!Module"],
+    "editor.formatOnType": true,
+    "editor.wordBasedSuggestions": "off",
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "ms-python.autopep8",
+    "editor.wordWrap": "off",
+    "editor.quickSuggestions": {
+      "other": "on",
+      "comments": "off",
+      "strings": "off"
+    },
+    "github.copilot.editor.enableAutoCompletions": true
+  },
+  "[shellscript]": {
+    "files.eol": "\n",
+    "editor.formatOnType": true,
+    "editor.codeLens": true,
+    "editor.wordBasedSuggestions": "off",
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "github.copilot.editor.enableAutoCompletions": true,
+    "editor.autoIndent": "keep",
+    "editor.indentSize": "tabSize"
+  },
+  "[powershell]": {
+    "debug.saveBeforeStart": "nonUntitledEditorsInActiveGroup",
+    "editor.semanticHighlighting.enabled": false,
+    "editor.wordSeparators": "`~!@#$%^&*()=+[{]}\\|;:'\",.<>/?",
+    "github.copilot.editor.enableAutoCompletions": true,
+    "files.eol": "\r\n",
+    "editor.formatOnSave": true,
+    "editor.formatOnType": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.autoIndent": "keep"
+  },
+  "[toml]": {
+    "editor.insertSpaces": true,
+    "editor.autoIndent": "keep",
+    "diffEditor.ignoreTrimWhitespace": false,
+    "editor.quickSuggestions": {
+      "strings": true
+    },
+    "editor.suggest.insertMode": "replace",
+    "editor.formatOnSave": true,
+    "editor.codeLens": true
+  },
+  "[markdown]": {
+    "editor.unicodeHighlight.ambiguousCharacters": false,
+    "editor.unicodeHighlight.invisibleCharacters": false,
+    "diffEditor.ignoreTrimWhitespace": false,
+    "editor.wordWrap": "on",
+    "editor.quickSuggestions": {
+      "other": "on",
+      "comments": "off",
+      "strings": "off"
+    },
+    "cSpell.fixSpellingWithRenameProvider": true,
+    "cSpell.advanced.feature.useReferenceProviderWithRename": true,
+    "cSpell.advanced.feature.useReferenceProviderRemove": "/^#+\\s/",
+    "github.copilot.editor.enableAutoCompletions": true,
+    "editor.codeLens": false
+  },
+  "[typescriptreact]": {
+    "editor.formatOnSave": true,
+    "editor.codeLens": true
+  },
+  "[yaml]": {
+    "editor.insertSpaces": true,
+    "editor.tabSize": 2,
+    "editor.autoIndent": "keep",
+    "diffEditor.ignoreTrimWhitespace": false,
+    "editor.quickSuggestions": {
+      "other": true,
+      "comments": false,
+      "strings": true
+    },
+    "github.copilot.editor.enableAutoCompletions": true
+  },
+  "[xml]": {
+    "editor.autoClosingBrackets": "always",
+    "files.trimFinalNewlines": true
+  },
+  "[html]": {
+    "editor.autoClosingBrackets": "always",
+    "files.trimFinalNewlines": true,
+    "files.trimTrailingWhitespace": true,
+    "editor.formatOnSave": true,
+    "editor.codeLens": true,
+    "github.copilot.editor.enableAutoCompletions": true
+  },
+  "copyrightInserter.license": "mit",
+  "copyrightInserter.year": "2024",
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.wordBasedSuggestions": "matchingDocuments",
+  "cSpell.words": [
+    "reprod"
+  ]
+}

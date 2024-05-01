@@ -4,6 +4,9 @@ title: "🐛 [BUG] - <title>"
 labels: [
   "bug"
 ]
+assignees: [
+  "TheModdersDen"
+]
 body:
   - type: textarea
     id: description
@@ -11,18 +14,23 @@ body:
       label: "Description"
       description: Please enter an explicit description of your issue
       placeholder: Short and explicit description of your incident...
-    validations:
-      required: true
-  - type: input
-    id: reprod-url
-    attributes:
-      label: "Reproduction URL"
-      description: Please enter your GitHub URL to provide a reproduction of the issue
-      placeholder: ex. https://github.com/USERNAME/REPO-NAME
+      render: markdown
     validations:
       required: true
   - type: textarea
-    id: reprod
+    id: repository-url
+    attributes:
+      label: "Your repository URL"
+      description: |
+        Please enter your GitHub repository URL to provide additional context,
+        if you created a repository based on this project. Otherwise, just 
+        leave this field blank and skip it.
+      placeholder: 'For example: https://github.com/USERNAME/REPO-NAME'
+      render: text
+    validations:
+      required: false
+  - type: textarea
+    id: reprod-steps
     attributes:
       label: "Reproduction steps"
       description: Please enter an explicit description of your issue
@@ -31,7 +39,7 @@ body:
         2. Click on '....'
         3. Scroll down to '....'
         4. See error
-      render: bash
+      render: markdown
     validations:
       required: true
   - type: textarea
@@ -41,7 +49,7 @@ body:
       description: If applicable, add screenshots to help explain your problem.
       value: |
         ![DESCRIPTION](LINK.png)
-      render: bash
+      render: markdown
     validations:
       required: false
   - type: textarea
@@ -52,29 +60,39 @@ body:
       render: bash
     validations:
       required: false
-  - type: dropdown
-    id: browsers
+  - type: textarea
+    id: wgsm-version
     attributes:
-      label: "Browsers"
-      description: What browsers are you seeing the problem on ?
-      multiple: true
-      options:
-        - Firefox
-        - Chrome
-        - Safari
-        - Microsoft Edge
-        - Opera
+      label: "WindowsGSM Version"
+      description: What version of WindowsGSM are you seeing the problem on?
+      placeholder: A specific version number or build (for example, 'v1.23.1' or 'build 1234')
+      render: text
     validations:
-      required: false
+      required: true
   - type: dropdown
-    id: os
+    id: os-type
     attributes:
-      label: "OS"
-      description: What is the impacted environment ?
+      label: "OS Type"
+      description: What is/are the impacted operating system(s)?
       multiple: true
       options:
         - Windows
         - Linux
         - Mac
+        - Other (please specify in the description)
     validations:
-      required: false
+      required: true
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: "Privacy Acknowledgement"
+      description: "Please confirm that you have read and agree to the terms and conditions."
+      options:
+        - label: "I understand that my question may be publicly visible."
+          required: true
+        - label: "I have read and agree to the terms and conditions (found in the 'TERMS_AND_CONDITIONS.md' file in the 'docs' directory)."
+          required: true
+        - label: "I understand that my question may be closed without notice, potentially without an answer."
+          required: true
+        - label: "I understand that my question may be removed, deleted, or otherwise altered without notice."
+          required: true
