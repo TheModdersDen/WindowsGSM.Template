@@ -29,7 +29,9 @@
 
 ### This plugin is a template plugin for use with WindowsGSM. It is not intended for use with any game
 
-#### USE AT YOUR OWN RISK
+### NOTE:
+
+**I AM STILL RE-LEARNING C# AFTER BEING OUT OF THE .NET COMMUNITY FOR A WHILE. USE THIS TEMPLATE AT YOUR OWN RISK!!!**
 
 ## Requirements
 
