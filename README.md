@@ -36,11 +36,11 @@
 ## Requirements
 
 - [WindowsGSM](https://windowsgsm.com/)
-- [A GitHub Account](https://github.com/signup), assuming you want to contribute to the project or want to create your own plugin based on this template.
-- [An IDE or Text Editor](https://www.codecademy.com/article/what-is-an-ide). I recommend Visual Studio Code: [Download Visual Studio Code](https://code.visualstudio.com/).
+- [A GitHub Account](https://github.com/signup) (assuming you want to contribute to the project or want to create your own plugin based on this template).
+- [An IDE or Text Editor](https://www.codecademy.com/article/what-is-an-ide) (I recommend Visual Studio Code: [Download Visual Studio Code](https://code.visualstudio.com/).
 - [A legal, retail copy of Windows (10 or later)](https://www.microsoft.com/en-us/windows/get-windows-10).
 - [A legal, retail copy of the game you want to host](https://store.steampowered.com/).
-- [And last, but not least, Windows 10+ Administrator permissions for the computer on which you'll be developing on](https://www.majorgeeks.com/content/page/windows_terminal_administrator.html). Preferably, use the Windows Terminal as your console of choice, as Administrator.
+- [And last, but not least, Windows 10+ Administrator permissions for the computer on which you'll be developing on](https://www.majorgeeks.com/content/page/windows_terminal_administrator.html) (Preferably, use the Windows Terminal as your console of choice, as Administrator).
 
 ## Contributing
 
